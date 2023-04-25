@@ -6,4 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\..\Core\Common\Common.csproj" />
+    <ProjectReference Include="..\..\EntityModel\Sample.EntityModels\Sample.EntityModels.csproj" />
+    <ProjectReference Include="..\..\Repositories\Sample.Repositories\Sample.Repositories.csproj" />
+  </ItemGroup>
+
 </Project>

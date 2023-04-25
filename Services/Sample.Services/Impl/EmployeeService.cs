@@ -14,13 +14,13 @@ public class EmployeeService : IEmployeeService
         _employeeRepository = employeeRepository;
     }
 
-    public async Task<IEnumerable<EmployeeDTO>> GetAll(string FirstName, string LastName, Gender? Gender)
+    public async Task<IEnumerable<EmployeeDTO>> GetAll(string firstName, string lastName, Gender? gender)
     {
         // use IQueriable to build query
         var employees = await _employeeRepository.GetAll();
-        return employees.Where(x => (x.FirstName == FirstName || FirstName == string.Empty) &&
-        (x.LastName == LastName || LastName == string.Empty) &&
-        (x.Gender == Gender || Gender == null)).ToList();
+        return employees.Where(x => (x.FirstName == firstName || firstName == string.Empty) &&
+        (x.LastName == lastName || lastName == string.Empty) &&
+        (x.Gender == gender || gender == null)).ToList();
     }
 
     public async Task<Guid> Save(UpdateEmployeeDTO dto)

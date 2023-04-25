@@ -19,16 +19,16 @@ public class EmployeeServiceTests
         {
             new EmployeeDTO {
                 Id = Guid.NewGuid(),
-                FirstName = "John",
-                LastName = "John",
+                FirstName = "FirstName",
+                LastName = "LastName",
                 Age = 25,
                 Gender = Gender.Male,
                 FullName = ""
             },
             new EmployeeDTO {
                 Id = Guid.NewGuid(),
-                FirstName = "Smith",
-                LastName = "Smith",
+                FirstName = "FirstName",
+                LastName = "LastName",
                 Age = 25,
                 Gender = Gender.Male,
                 FullName = ""
@@ -57,8 +57,8 @@ public class EmployeeServiceTests
 
         var insert_dto = new InsertEmployeeDTO()
         {
-            FirstName = "John",
-            LastName = "Smith",
+            FirstName = "FirstName",
+            LastName = "LastName",
             Age = 12,
             Gender = Gender.Male
         };
@@ -66,8 +66,8 @@ public class EmployeeServiceTests
         var insertDto = new UpdateEmployeeDTO()
         {
             Id = Guid.Empty,
-            FirstName = "John",
-            LastName = "Smith",
+            FirstName = "FirstName",
+            LastName = "LastName",
             Age = 12,
             Gender = Gender.Male
         };
@@ -75,8 +75,8 @@ public class EmployeeServiceTests
         var updateDto = new UpdateEmployeeDTO()
         {
             Id = Guid.NewGuid(),
-            FirstName = "John",
-            LastName = "Smith",
+            FirstName = "FirstName",
+            LastName = "LastName",
             Age = 12,
             Gender = Gender.Male
         };

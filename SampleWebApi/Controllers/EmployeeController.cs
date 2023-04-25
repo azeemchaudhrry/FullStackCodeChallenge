@@ -16,9 +16,9 @@ namespace SampleWebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult> GetAll(string firstName, string lastName, Gender gender)
+        public async Task<ActionResult> GetAll(string? firstName, string? lastName, Gender? gender)
         {
-            var response = await _employeeService.GetAll(firstName, lastName, gender);
+            var response = await _employeeService.GetAll(firstName ?? string.Empty, lastName ?? string.Empty, gender);
             return response.Count() > 0 ? Ok(response) : NotFound();
         }
 
